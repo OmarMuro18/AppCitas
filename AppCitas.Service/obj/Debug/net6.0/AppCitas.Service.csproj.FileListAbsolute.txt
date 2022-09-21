@@ -52,3 +52,8 @@ C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\o
 C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\obj\Debug\net6.0\AppCitas.Service.pdb
 C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\obj\Debug\net6.0\AppCitas.Service.genruntimeconfig.cache
 C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\obj\Debug\net6.0\ref\AppCitas.Service.dll
+C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
