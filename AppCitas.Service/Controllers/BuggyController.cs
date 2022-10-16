@@ -1,9 +1,7 @@
 ﻿using AppCitas.Service.Data;
 using AppCitas.Service.Entities;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.RegularExpressions;
 
 namespace AppCitas.Service.Controllers;
 
@@ -27,7 +25,9 @@ public class BuggyController : BaseApiController
     public ActionResult<AppUser> GetNotFound()
     {
         var thing = _context.Users.Find(-1);
+
         if (thing == null) return NotFound();
+
         return Ok(thing);
     }
 
@@ -35,7 +35,9 @@ public class BuggyController : BaseApiController
     public ActionResult<string> GetServerError()
     {
         var thing = _context.Users.Find(-1);
+
         var thingToReturn = thing.ToString();
+
         return thingToReturn;
     }
 

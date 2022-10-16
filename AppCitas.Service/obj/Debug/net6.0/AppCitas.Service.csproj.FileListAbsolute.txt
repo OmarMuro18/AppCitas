@@ -60,3 +60,8 @@ C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\b
 C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\bin\Debug\net6.0\Data\UserSeedData.json
+C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\omarm\Documents\SERVICIOS WEB\Repo AppCitas\AppCitas\AppCitas.Service\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

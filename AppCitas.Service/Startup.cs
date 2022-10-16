@@ -1,13 +1,6 @@
-using AppCitas.Service.Data;
 using AppCitas.Service.Extensions;
-using AppCitas.Service.Interfaces;
 using AppCitas.Service.Middleware;
-using AppCitas.Service.Services;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Text;
 
 namespace AppCitas;
 
@@ -29,6 +22,7 @@ public class Startup
         services.AddControllers();
         services.AddCors();
         services.AddIdentityServices(_config);
+
         services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIv5", Version = "v1" });
@@ -38,7 +32,7 @@ public class Startup
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
-        app.UseMiddleware <ExceptionMiddleware>();
+        app.UseMiddleware<ExceptionMiddleware>();
 
         app.UseHttpsRedirection();
 
@@ -47,7 +41,7 @@ public class Startup
         app.UseCors(p => p.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
 
         app.UseAuthentication();
-         
+
         app.UseAuthorization();
 
         app.UseEndpoints(endpoints =>

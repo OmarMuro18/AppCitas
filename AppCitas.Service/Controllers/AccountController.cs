@@ -1,24 +1,24 @@
-﻿using AppCitas.Service.Data;
+﻿using System.Security.Cryptography;
+using System.Text;
+using AppCitas.Service.Data;
 using AppCitas.Service.DTOs;
 using AppCitas.Service.Entities;
 using AppCitas.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography;
-using System.Text;
 
 namespace AppCitas.Service.Controllers;
 
 public class AccountController : BaseApiController
 {
-	private readonly DataContext _context;
-	private readonly ITokenService _tokenService;
+    private readonly DataContext _context;
+    private readonly ITokenService _tokenService;
 
-	public AccountController(DataContext context, ITokenService tokenService)
-	{
-		_context = context;
-		_tokenService = tokenService;
-	}
+    public AccountController(DataContext context, ITokenService tokenService)
+    {
+        _context = context;
+        _tokenService = tokenService;
+    }
 
     [HttpPost("register")]
     public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)

@@ -1,6 +1,6 @@
-﻿using AppCitas.Service.Errors;
-using System.Net;
+﻿using System.Net;
 using System.Text.Json;
+using AppCitas.Service.Errors;
 
 namespace AppCitas.Service.Middleware;
 
@@ -10,7 +10,7 @@ public class ExceptionMiddleware
 	private readonly ILogger<ExceptionMiddleware> _logger;
 	private readonly IHostEnvironment _env;
 
-	public ExceptionMiddleware(RequestDelegate next, ILogger <ExceptionMiddleware> logger, IHostEnvironment env)
+	public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger, IHostEnvironment env)
 	{
 		_next = next;
 		_logger = logger;
@@ -23,16 +23,15 @@ public class ExceptionMiddleware
 		{
 			await _next(context);
 		}
-		catch(Exception ex)
+		catch (Exception ex)
 		{
 			_logger.LogError(ex, ex.Message);
-			context.Response.ContentType = "aplication/json";
+			context.Response.ContentType = "application/json";
 			context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
 			var response = _env.IsDevelopment()
-				? new ApiException(context.Response.StatusCode, ex.Message,
-				ex.StackTrace?.ToString())
-				: new ApiException(context.Response.StatusCode, "Internal Server Erro");
+				? new ApiException(context.Response.StatusCode, ex.Message, ex.StackTrace?.ToString())
+				: new ApiException(context.Response.StatusCode, "Internal Server Error");
 
 			var options = new JsonSerializerOptions
 			{
@@ -40,6 +39,7 @@ public class ExceptionMiddleware
 			};
 
 			var json = JsonSerializer.Serialize(response, options);
+
 			await context.Response.WriteAsync(json);
 		}
 	}
